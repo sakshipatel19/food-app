@@ -11,9 +11,21 @@ class Categories extends Component {
 	};
 	createCategoryItemsList = (favProduct) =>
 		favProduct.map((product, i) => (
-			<Card product={product} btnTitle='ADD TO BAG' index={i + 1} />
+			<Card
+				product={product}
+				btnTitle='ADD TO BAG'
+				index={i + 1}
+				productId={`${product.category}${i + 1}`}
+				handleCardclick={this.handleCardclick}
+				handleAddBtnClick={this.handleAddBtnClick}
+			/>
 		));
-
+	handleCardclick = (product) => {
+		this.props.setProductDetail(product);
+		this.props.history.push('/product');
+	};
+	handleAddBtnClick = () => {};
+	handleSearch = () => {};
 	render() {
 		const { productList } = this.props;
 		const favProduct = productList.data ? productList.data.recipes : [];

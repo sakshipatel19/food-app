@@ -5,7 +5,10 @@ import './Card.scss';
 const Card = (props) => {
 	const photo = require('../../assets/images/' + props.index + '.jpg').default;
 	return (
-		<div className='card-container' onClick={props.handleCardclick}>
+		<div
+			className='card-container'
+			onClick={() => props.handleCardclick(props.product)}
+		>
 			<div className='image-conatiner'>
 				<img className='image' src={photo} alt='productImage' />
 			</div>

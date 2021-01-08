@@ -5,7 +5,7 @@ class Cart extends Component {
 		cartItems: [],
 	};
 	render() {
-		return <div />;
+		return <div className='cart-conatiner'></div>;
 	}
 }
 

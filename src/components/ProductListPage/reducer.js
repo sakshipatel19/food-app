@@ -6,6 +6,7 @@ const defaultState = {
 		error: null,
 		data: null,
 	},
+	product: {},
 };
 
 const productListReducer = (state = defaultState, action) => {
@@ -26,6 +27,11 @@ const productListReducer = (state = defaultState, action) => {
 			return {
 				...state,
 				productList: { fetching: false, error: action.response, data: null },
+			};
+		case constants.SET_PRODUCT_DETAILS:
+			return {
+				...state,
+				product: action.product,
 			};
 
 		default:

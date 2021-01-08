@@ -11,7 +11,7 @@ function* fetchProductList(action) {
 	try {
 		const result = yield fetch('http://temp.dash.zeta.in/food.php');
 		const resData = yield result.json();
-		yield put(actions.errorProductList(resData));
+		yield put(actions.reciveProductList(resData));
 	} catch (error) {
 		yield put(actions.errorProductList(error));
 	}

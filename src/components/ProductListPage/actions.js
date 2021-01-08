@@ -17,6 +17,11 @@ export const reciveProductList = (response) => ({
 });
 // product list error action
 export const errorProductList = (response) => ({
-	type: constants.GET_PRODUCT_LIST_SUCCESS,
+	type: constants.GET_PRODUCT_LIST_ERROR,
 	response,
+});
+
+export const setProductDetail = (product) => ({
+	type: constants.SET_PRODUCT_DETAILS,
+	product,
 });

@@ -23,6 +23,7 @@ class FavouriteItems extends Component {
 	handleAddBtnClick = () => {};
 	render() {
 		const { productList } = this.props;
+
 		const favProduct = productList.data
 			? productList.data.recipes.filter((item) => item.isFavourite)
 			: [];
