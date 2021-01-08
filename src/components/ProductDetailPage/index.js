@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ProductDetailPage = () => {
+const ProductDetailPage = (props) => {
 	return <div />;
 };
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
+import Categories from '../Category';
 import FavouriteItems from '../Favourite';
 
 class ProductListPage extends Component {
@@ -9,10 +10,10 @@ class ProductListPage extends Component {
 
 	render() {
 		const { productList } = this.props;
-		console.log(productList);
 		return (
 			<div className='product-listpage-container'>
 				<FavouriteItems productList={productList} />
+				<Categories productList={productList} />
 			</div>
 		);
 	}

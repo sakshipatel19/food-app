@@ -1,16 +1,24 @@
 .favourite-items-container {
-	display: flex;
-	flex-wrap: nowrap;
-	overflow-x: auto;
-	height: 250px;
-	margin-bottom: 20px;
-	width: 100%;
-	-webkit-overflow-scrolling: touch;
-	&::-webkit-scrollbar {
-		display: none;
-	}
-	.card-container {
-		flex: 0 0 auto;
+	padding-bottom: 2rem;
+	border-bottom: 1px solid #ccc;
+	margin: 10px;
+	.favourite-items-header {
 		margin: 10px;
+	}
+	.favourite-items-content {
+		display: flex;
+		flex-wrap: nowrap;
+		overflow-x: auto;
+		height: 250px;
+		margin-bottom: 20px;
+		width: 100%;
+		-webkit-overflow-scrolling: touch;
+		&::-webkit-scrollbar {
+			display: none;
+		}
+		.card-container {
+			flex: 0 0 auto;
+			margin: 10px;
+		}
 	}
 }
