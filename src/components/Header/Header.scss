@@ -2,11 +2,24 @@
 	top: 0;
 	height: 80px;
 	color: #fff;
-	// position: fixed;
-	width: 100%;
+	position: sticky;
 	margin: 0 auto;
 	background: linear-gradient(to bottom left, #5ec386 50%, #5fc56e 50%);
 	font-size: 1.5rem;
 	display: flex;
-	justify-content: center;
+	z-index: 2;
+	h1 {
+		margin: 10px auto;
+	}
+	.cart-header {
+		position: relative;
+		margin-top: 2rem;
+
+		.cart {
+			float: right;
+			color: #ffff;
+			padding-right: 3rem;
+			padding-top: 1rem;
+		}
+	}
 }

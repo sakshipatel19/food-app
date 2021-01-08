@@ -1,5 +1,5 @@
 .categories-items-container {
-	margin: 1rem;
+	margin: 2rem;
 	.categories-items-content {
 		display: flex;
 		flex-direction: row;
@@ -22,14 +22,13 @@
 		border-bottom: 1px solid #ccc;
 		background: #f5f5f5;
 		outline: none;
-		margin-bottom: 2rem;
+		margin-bottom: 1rem 2rem;
 	}
 	.categories-conatiner {
 		display: flex;
 		flex-wrap: nowrap;
 		overflow-x: auto;
 		margin-bottom: 20px;
-		width: 100%;
 		justify-content: space-between;
 		margin-left: 1rem;
 		margin-right: 1rem;

@@ -4,6 +4,10 @@ import './Card.scss';
 
 const Card = (props) => {
 	const photo = require('../../assets/images/' + props.index + '.jpg').default;
+	const handleAddBtnClick = (event, product) => {
+		event.stopPropagation();
+		props.handleAddBtnClick(product);
+	};
 	return (
 		<div
 			className='card-container'
@@ -17,7 +21,10 @@ const Card = (props) => {
 					<div className='item-desc'>{props.product.name}</div>
 					<div className='item-price'>{props.product.price}</div>
 				</div>
-				<button className='addBtn' onClick={props.handleAddBtnClick}>
+				<button
+					className='addBtn'
+					onClick={(e) => handleAddBtnClick(e, props.product)}
+				>
 					{props.btnTitle}
 				</button>
 			</div>

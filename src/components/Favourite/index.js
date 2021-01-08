@@ -20,7 +20,15 @@ class FavouriteItems extends Component {
 		this.props.setProductDetail(product);
 		this.props.history.push('/product');
 	};
-	handleAddBtnClick = () => {};
+	handleAddBtnClick = (product) => {
+		const cartItems =
+			(localStorage.getItem('cartItems') &&
+				JSON.parse(localStorage.getItem('cartItems'))) ||
+			[];
+		const updatedCartItems = [...cartItems, product];
+		console.log(updatedCartItems);
+		localStorage.setItem('cartItems', JSON.stringify([...cartItems, product]));
+	};
 	render() {
 		const { productList } = this.props;
 
