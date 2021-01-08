@@ -12,8 +12,8 @@ class ProductListPage extends Component {
 		const { productList } = this.props;
 		return (
 			<div className='product-listpage-container'>
-				<FavouriteItems productList={productList} />
-				<Categories productList={productList} />
+				<FavouriteItems productList={productList} {...this.props} />
+				<Categories productList={productList} {...this.props} />
 			</div>
 		);
 	}

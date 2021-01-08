@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { withRouter } from 'react-router';
 
 const ProductDetailPage = ({ product }) => {
 	const { productCout, setProductCount } = useState(1);
@@ -26,4 +27,4 @@ const ProductDetailPage = ({ product }) => {
 	);
 };
 
-export default ProductDetailPage;
+export default withRouter(ProductDetailPage);
