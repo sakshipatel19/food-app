@@ -11,7 +11,7 @@ class Categories extends Component {
 	};
 	createCategoryItemsList = (favProduct) =>
 		favProduct.map((product, i) => (
-			<Card product={product} btnTitle='ADD TO BAG' />
+			<Card product={product} btnTitle='ADD TO BAG' index={i + 1} />
 		));
 
 	render() {
@@ -28,6 +28,7 @@ class Categories extends Component {
 						onChange={this.handleSearch}
 					/>
 				</div>
+				<div className='select-cat-text'>SELECT CATEGORIES</div>
 				<div className='categories-conatiner'>
 					{productList.data &&
 						productList.data.categories.map((category) => {

@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 
 class Cart extends Component {
-	state = {};
+	state = {
+		cartItems: [],
+	};
 	render() {
 		return <div />;
 	}
