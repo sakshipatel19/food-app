@@ -41,12 +41,16 @@
 			flex: 0 0 auto;
 			margin: 10px;
 		}
+		.category.selected {
+			border-bottom: 2px solid green;
+		}
 		.category {
 			display: flex;
 			flex-direction: row;
 			align-items: center;
 			justify-content: space-between;
 			background: #fff;
+			cursor: pointer;
 			box-shadow: 0 0 -10px rgba(0, 0, 0, 0.7);
 			height: 40px;
 			width: 150px;

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 
 import Card from '../common/Card';
 import './Category.scss';
@@ -25,10 +24,28 @@ class Categories extends Component {
 		this.props.history.push('/product');
 	};
 	handleAddBtnClick = () => {};
-	handleSearch = () => {};
+	handleSearch = (event) => {
+		this.setState({ searchText: event.target.value });
+	};
+	handleCategorySelect = (selectedCategory) => {
+		this.setState({ selectedCategory });
+	};
 	render() {
 		const { productList } = this.props;
-		const favProduct = productList.data ? productList.data.recipes : [];
+		const { selectedCategory, searchText } = this.state;
+		const favProduct = productList.data
+			? searchText
+				? productList.data.recipes.filter(
+						(e) =>
+							(selectedCategory &&
+								e.category == selectedCategory &&
+								e.name.toLowerCase().includes(searchText.toLowerCase())) ||
+							e.name.toLowerCase().includes(searchText.toLowerCase())
+				  )
+				: selectedCategory
+				? productList.data.recipes.filter((e) => e.category == selectedCategory)
+				: productList.data.recipes
+			: [];
 		return (
 			<div className='categories-items-container'>
 				<div className='categories-items-header'>
@@ -45,7 +62,12 @@ class Categories extends Component {
 					{productList.data &&
 						productList.data.categories.map((category) => {
 							return (
-								<div className='category'>
+								<div
+									className={`category ${
+										selectedCategory === category.name && 'selected'
+									}`}
+									onClick={() => this.handleCategorySelect(category.name)}
+								>
 									<div className='category-image'>
 										<img src={category.image} />
 									</div>
@@ -57,7 +79,9 @@ class Categories extends Component {
 						})}
 				</div>
 				<div className='categories-items-content'>
-					{this.createCategoryItemsList(favProduct)}
+					{favProduct
+						? this.createCategoryItemsList(favProduct)
+						: 'No Products found'}
 				</div>
 			</div>
 		);
