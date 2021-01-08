@@ -1,0 +1,16 @@
+.favourite-items-container {
+	display: flex;
+	flex-wrap: nowrap;
+	overflow-x: auto;
+	height: 250px;
+	margin-bottom: 20px;
+	width: 100%;
+	-webkit-overflow-scrolling: touch;
+	&::-webkit-scrollbar {
+		display: none;
+	}
+	.card-container {
+		flex: 0 0 auto;
+		margin: 10px;
+	}
+}
