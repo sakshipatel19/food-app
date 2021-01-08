@@ -13,14 +13,18 @@ class Cart extends Component {
 		return (
 			<div className='cart-conatiner'>
 				<div className='cart-items-conatiner'>
-					{cartItems.map((item) => (
+					{cartItems.map((item, i) => (
 						<div className='cart-item'>
 							<div
 								className='remove-item'
 								onClick={this.handleRemoveItem}
 							></div>
 							<div className='item-image'>
-								<img src={item.image} />
+								<img
+									src={
+										require('../../assets/images/' + (i + 1) + '.jpg').default
+									}
+								/>
 							</div>
 							<div className='item-name-price'>
 								<div className='item-name'>{item.name}</div>

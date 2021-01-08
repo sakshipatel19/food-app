@@ -6,6 +6,7 @@ import FavouriteItems from '../Favourite';
 class ProductListPage extends Component {
 	componentDidMount() {
 		this.props.requestProductList();
+		this.props.setCartItems(JSON.parse(localStorage.getItem('cartItems')));
 	}
 
 	render() {

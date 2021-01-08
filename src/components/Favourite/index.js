@@ -27,6 +27,7 @@ class FavouriteItems extends Component {
 			[];
 		const updatedCartItems = [...cartItems, product];
 		console.log(updatedCartItems);
+		this.props.setCartItems(updatedCartItems);
 		localStorage.setItem('cartItems', JSON.stringify([...cartItems, product]));
 	};
 	render() {

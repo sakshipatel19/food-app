@@ -7,6 +7,7 @@ const defaultState = {
 		data: null,
 	},
 	product: {},
+	cartItems: [],
 };
 
 const productListReducer = (state = defaultState, action) => {
@@ -32,6 +33,11 @@ const productListReducer = (state = defaultState, action) => {
 			return {
 				...state,
 				product: action.product,
+			};
+		case constants.SET_CART_ITEMS:
+			return {
+				...state,
+				cartItems: action.response,
 			};
 
 		default:

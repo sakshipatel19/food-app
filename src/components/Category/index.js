@@ -30,6 +30,7 @@ class Categories extends Component {
 			[];
 		const updatedCartItems = [...cartItems, product];
 		console.log(updatedCartItems);
+		this.props.setCartItems(updatedCartItems);
 		localStorage.setItem('cartItems', JSON.stringify([...cartItems, product]));
 	};
 	handleSearch = (event) => {
@@ -57,6 +58,9 @@ class Categories extends Component {
 		return (
 			<div className='categories-items-container'>
 				<div className='categories-items-header'>
+					<span>
+						<i className='fa fa-search' aria-hidden='true'></i>
+					</span>
 					<input
 						className='search-category'
 						type='text'

@@ -1,0 +1,18 @@
+.cart-conatiner {
+	.cart-items-conatiner {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		.cart-item {
+			display: flex;
+			padding: 2rem 1rem;
+			flex-direction: row;
+			.item-image {
+				img {
+					height: 20rem;
+					width: 20rem;
+				}
+			}
+		}
+	}
+}

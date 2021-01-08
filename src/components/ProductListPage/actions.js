@@ -21,7 +21,13 @@ export const errorProductList = (response) => ({
 	response,
 });
 
+//SET PRODUCT ACTION
 export const setProductDetail = (product) => ({
 	type: constants.SET_PRODUCT_DETAILS,
 	product,
+});
+
+export const setCartItems = (response) => ({
+	type: constants.SET_CART_ITEMS,
+	response,
 });
