@@ -15,22 +15,28 @@ class Cart extends Component {
 				<div className='cart-items-conatiner'>
 					{cartItems.map((item, i) => (
 						<div className='cart-item'>
-							<div
+							{/* <div
 								className='remove-item'
 								onClick={this.handleRemoveItem}
-							></div>
-							<div className='item-image'>
-								<img
-									src={
-										require('../../assets/images/' + (i + 1) + '.jpg').default
-									}
-								/>
+							></div> */}
+							<div className='img-desc-container'>
+								<div className='item-image'>
+									<img
+										src={
+											require('../../assets/images/' + (i + 1) + '.jpg').default
+										}
+									/>
+								</div>
+								<div className='item-name-price'>
+									<div className='item-name'>{item.name}</div>
+									<div className='item-price'>{`RS ${item.price}`}</div>
+								</div>
 							</div>
-							<div className='item-name-price'>
-								<div className='item-name'>{item.name}</div>
-								<div className='item-price'>{item.price}</div>
+							<div className='add-remove-btn'>
+								<i className='plus'>+</i>
+
+								<i className='minus'>-</i>
 							</div>
-							<div className='add-remove-btn'></div>
 						</div>
 					))}
 				</div>

@@ -19,7 +19,7 @@ const Card = (props) => {
 			<div className='card-body'>
 				<div className='item-desc-container'>
 					<div className='item-desc'>{props.product.name}</div>
-					<div className='item-price'>{props.product.price}</div>
+					<div className='item-price'>{`RS ${props.product.price}`}</div>
 				</div>
 				<button
 					className='addBtn'
