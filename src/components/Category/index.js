@@ -57,9 +57,8 @@ class Categories extends Component {
 		return (
 			<div className='categories-items-container'>
 				<div className='categories-items-header'>
-					<span>
-						<i className='fa fa-search' aria-hidden='true'></i>
-					</span>
+					<i className='fa fa-search' aria-hidden='true'></i>
+
 					<input
 						className='search-category'
 						type='text'
