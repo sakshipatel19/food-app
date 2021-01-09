@@ -9,7 +9,9 @@ function* watchProductList() {
 
 function* fetchProductList(action) {
 	try {
-		const result = yield fetch('http://temp.dash.zeta.in/food.php');
+		const result = yield fetch(
+			'https://food-app-8eea0-default-rtdb.firebaseio.com/data.json'
+		);
 		const resData = yield result.json();
 		yield put(actions.reciveProductList(resData));
 	} catch (error) {
