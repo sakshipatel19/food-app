@@ -29,7 +29,6 @@ class Categories extends Component {
 				JSON.parse(localStorage.getItem('cartItems'))) ||
 			[];
 		const updatedCartItems = [...cartItems, product];
-		console.log(updatedCartItems);
 		this.props.setCartItems(updatedCartItems);
 		localStorage.setItem('cartItems', JSON.stringify([...cartItems, product]));
 	};

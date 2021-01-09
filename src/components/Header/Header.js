@@ -31,7 +31,14 @@ class Header extends Component {
 				<h1>Best Food App</h1>
 				<div className='cart-header'>
 					<Link to='/cart'>
-						<i className='fa fa-shopping-cart cart'>({cartItems.length})</i>
+						<i
+							className='fa badge'
+							style={{ fontSize: '24px', color: 'white' }}
+							value={cartItems.length}
+						>
+							&#xf07a;
+						</i>
+						{/* <i className='fa fa-shopping-cart cart'>({cartItems.length})</i> */}
 					</Link>
 				</div>
 			</header>

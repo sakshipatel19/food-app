@@ -76,3 +76,12 @@
 		}
 	}
 }
+
+@media only screen and (max-width: 600px) {
+	.categories-items-content {
+		.card-container {
+			width: 100% !important;
+			padding: 2rem;
+		}
+	}
+}
