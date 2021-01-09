@@ -40,7 +40,7 @@ class FavouriteItems extends Component {
 			<div className='favourite-items-container'>
 				<div className='favourite-items-header'>
 					<h2>FAVOURITES</h2>
-					<h3>Enjoy what you have been ordering</h3>
+					<h3>Enjoy what you have been ordering!</h3>
 				</div>
 				<div className='favourite-items-content'>
 					{this.createFavouriteItemsList(favProduct)}

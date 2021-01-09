@@ -43,6 +43,12 @@
 		padding: 1rem;
 		color: #ccc;
 		font-weight: 500;
+		.rating {
+			.fa-star {
+				color: #e1aa41;
+				padding-right: 1rem;
+			}
+		}
 	}
 	.product-details {
 		padding: 1rem;

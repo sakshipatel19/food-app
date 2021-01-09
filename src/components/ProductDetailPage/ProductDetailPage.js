@@ -24,7 +24,10 @@ const ProductDetailPage = (props) => {
 			</div>
 			<div className='category-rank-details'>
 				<div className='category-type'>{`Category:${product.category}`}</div>
-				<div className='rating'>{`${product.rating} Rating, (${product.reviews} Reviews)`}</div>
+				<div className='rating'>
+					<i className='fas fa-star'></i>
+					{`${product.rating} Rating, (${product.reviews} Reviews)`}
+				</div>
 			</div>
 			<div className='product-details'>
 				<div className='details-title'>DETAILS</div>
