@@ -17,9 +17,7 @@ const ProductDetailPage = (props) => {
 					<div className='prduct-price'>{product.price}</div>
 				</div>
 				<div className='addRemoveBtn'>
-					<i className='plus'>+</i>
-					{productCout}
-					<i className='minus'>-</i>
+					<i className='plus'>+</i>1<i className='minus'>-</i>
 				</div>
 			</div>
 			<div className='category-rank-details'>

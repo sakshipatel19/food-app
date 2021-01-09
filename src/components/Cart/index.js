@@ -30,9 +30,7 @@ class Cart extends Component {
 									</div>
 								</div>
 								<div className='add-remove-btn'>
-									<i className='plus'>+</i>
-
-									<i className='minus'>-</i>
+									<i className='plus'>+</i>1<i className='minus'>-</i>
 								</div>
 							</div>
 						))}
