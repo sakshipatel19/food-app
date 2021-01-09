@@ -41,19 +41,31 @@ class Categories extends Component {
 	render() {
 		const { productList } = this.props;
 		const { selectedCategory, searchText } = this.state;
-		const favProduct = productList.data
-			? searchText
-				? productList.data.recipes.filter(
-						(e) =>
-							(selectedCategory &&
-								e.category == selectedCategory &&
-								e.name.toLowerCase().includes(searchText.toLowerCase())) ||
-							e.name.toLowerCase().includes(searchText.toLowerCase())
-				  )
-				: selectedCategory
-				? productList.data.recipes.filter((e) => e.category == selectedCategory)
-				: productList.data.recipes
-			: [];
+		let favProduct = [];
+		if (productList.data) {
+			// filter search result within selected category
+			if (searchText !== '' && selectedCategory !== '') {
+				favProduct = productList.data.recipes.filter(
+					(e) =>
+						e.category == selectedCategory &&
+						e.name.toLowerCase().includes(searchText.toLowerCase())
+				);
+				//filter search result within all listed product
+			} else if (searchText !== '' && selectedCategory == '') {
+				favProduct = productList.data.recipes.filter((e) =>
+					e.name.toLowerCase().includes(searchText.toLowerCase())
+				);
+				// filter results with selected category
+			} else if (selectedCategory !== '' && searchText == '') {
+				favProduct = productList.data.recipes.filter(
+					(e) => e.category == selectedCategory
+				);
+				// display all products if no filters applied
+			} else {
+				favProduct = productList.data.recipes;
+			}
+		}
+
 		return (
 			<div className='categories-items-container'>
 				<div className='categories-items-header'>

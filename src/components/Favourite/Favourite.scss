@@ -4,6 +4,16 @@
 	margin: 2rem;
 	.favourite-items-header {
 		margin: 10px;
+		h2 {
+			word-spacing: 0.2rem;
+			font-weight: bold;
+			font-size: 1.8rem;
+		}
+		h3 {
+			font-size: 1.5rem;
+			color: gray;
+			word-spacing: 0.2rem;
+		}
 	}
 	.favourite-items-content {
 		display: flex;
