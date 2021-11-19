@@ -33,8 +33,8 @@ class FavouriteItems extends Component {
 	render() {
 		const { productList } = this.props;
 
-		const favProduct = productList.data
-			? productList.data.recipes.filter((item) => item.isFavourite)
+		const favProduct = productList?.data
+			? productList?.data?.recipes?.filter((item) => item.isFavourite)
 			: [];
 		return (
 			<div className='favourite-items-container'>
