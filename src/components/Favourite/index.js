@@ -6,7 +6,7 @@ import Card from '../common/Card';
 
 class FavouriteItems extends Component {
 	createFavouriteItemsList = (favProduct) =>
-		favProduct.map((product, i) => (
+		favProduct?.map((product, i) => (
 			<Card
 				product={product}
 				btnTitle='REORDER'
