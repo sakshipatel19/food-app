@@ -9,7 +9,7 @@ class Categories extends Component {
 		selectedCategory: '',
 	};
 	createCategoryItemsList = (favProduct) =>
-		favProduct.map((product, i) => (
+		favProduct?.map((product, i) => (
 			<Card
 				product={product}
 				btnTitle='ADD TO BAG'
@@ -42,7 +42,7 @@ class Categories extends Component {
 		const { productList } = this.props;
 		const { selectedCategory, searchText } = this.state;
 		let favProduct = [];
-		if (productList.data) {
+		if (productList?.data) {
 			// filter search result within selected category
 			if (searchText !== '' && selectedCategory !== '') {
 				favProduct = productList?.data?.recipes?.filter(
