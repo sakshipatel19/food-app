@@ -45,19 +45,19 @@ class Categories extends Component {
 		if (productList.data) {
 			// filter search result within selected category
 			if (searchText !== '' && selectedCategory !== '') {
-				favProduct = productList.data.recipes.filter(
+				favProduct = productList?.data?.recipes?.filter(
 					(e) =>
 						e.category == selectedCategory &&
 						e.name.toLowerCase().includes(searchText.toLowerCase())
 				);
 				//filter search result within all listed product
 			} else if (searchText !== '' && selectedCategory == '') {
-				favProduct = productList.data.recipes.filter((e) =>
+				favProduct = productList?.data?.recipes?.filter((e) =>
 					e.name.toLowerCase().includes(searchText.toLowerCase())
 				);
 				// filter results with selected category
 			} else if (selectedCategory !== '' && searchText == '') {
-				favProduct = productList.data.recipes.filter(
+				favProduct = productList?.data?.recipes?.filter(
 					(e) => e.category == selectedCategory
 				);
 				// display all products if no filters applied
@@ -81,8 +81,8 @@ class Categories extends Component {
 				</div>
 				<div className='select-cat-text'>SELECT CATEGORIES</div>
 				<div className='categories-conatiner'>
-					{productList.data &&
-						productList.data.categories.map((category) => {
+					{productList?.data &&
+						productList?.data?.categories?.map((category) => {
 							return (
 								<div
 									className={`category ${
